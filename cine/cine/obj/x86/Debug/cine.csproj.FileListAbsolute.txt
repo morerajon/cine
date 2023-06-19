@@ -1,0 +1,10 @@
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\bin\Debug\cine.exe
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\bin\Debug\cine.pdb
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.Form1.resources
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.Properties.Resources.resources
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.csproj.GenerateResource.Cache
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.exe
+c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.pdb
+C:\Users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.csprojResolveAssemblyReference.cache
+C:\Users\lenovo\documents\visual studio 2010\Projects\cine\cine\bin\Debug\Transitions.dll
+C:\Users\lenovo\Documents\Visual Studio 2010\Projects\cine\cine\obj\x86\Debug\cine.Form2.resources
