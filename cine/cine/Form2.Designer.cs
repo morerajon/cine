@@ -47,10 +47,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pnlPagoTj = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.pnlPagoMp = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rBMP = new System.Windows.Forms.RadioButton();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -60,10 +57,22 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.pnlPagoTj = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtVto = new System.Windows.Forms.TextBox();
+            this.txtCVV = new System.Windows.Forms.TextBox();
+            this.txtTj = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pnlPagoMp = new System.Windows.Forms.Panel();
+            this.btnCancelMp = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,9 +82,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.pnlPagoTj.SuspendLayout();
             this.pnlPagoMp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -103,7 +113,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(731, 383);
             this.panel1.TabIndex = 8;
-        
             // 
             // panel3
             // 
@@ -288,19 +297,9 @@
             this.panel7.Size = new System.Drawing.Size(725, 375);
             this.panel7.TabIndex = 21;
             // 
-            // pnlPagoTj
-            // 
-            this.pnlPagoTj.Location = new System.Drawing.Point(82, 137);
-            this.pnlPagoTj.Name = "pnlPagoTj";
-            this.pnlPagoTj.Size = new System.Drawing.Size(298, 100);
-            this.pnlPagoTj.TabIndex = 27;
-            this.pnlPagoTj.Visible = false;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(196)))));
-            this.panel8.Controls.Add(this.pnlPagoTj);
-            this.panel8.Controls.Add(this.radioButton2);
             this.panel8.Controls.Add(this.rBMP);
             this.panel8.Controls.Add(this.txtApellido);
             this.panel8.Controls.Add(this.txtNombre);
@@ -310,34 +309,13 @@
             this.panel8.Controls.Add(this.label16);
             this.panel8.Controls.Add(this.label17);
             this.panel8.Controls.Add(this.label19);
+            this.panel8.Controls.Add(this.radioButton2);
+            this.panel8.Controls.Add(this.pnlPagoTj);
             this.panel8.Controls.Add(this.pnlPagoMp);
             this.panel8.Location = new System.Drawing.Point(17, 73);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(395, 241);
             this.panel8.TabIndex = 8;
-            
-            // 
-            // pnlPagoMp
-            // 
-            this.pnlPagoMp.Controls.Add(this.label5);
-            this.pnlPagoMp.Controls.Add(this.pictureBox3);
-            this.pnlPagoMp.Location = new System.Drawing.Point(85, 136);
-            this.pnlPagoMp.Name = "pnlPagoMp";
-            this.pnlPagoMp.Size = new System.Drawing.Size(298, 100);
-            this.pnlPagoMp.TabIndex = 26;
-            this.pnlPagoMp.Visible = false;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Image = ((System.Drawing.Image)(resources.GetObject("radioButton2.Image")));
-            this.radioButton2.Location = new System.Drawing.Point(101, 154);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 62);
-            this.radioButton2.TabIndex = 25;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // rBMP
             // 
@@ -361,9 +339,10 @@
             this.txtApellido.MaximumSize = new System.Drawing.Size(267, 73);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.ReadOnly = true;
+            this.txtApellido.ShortcutsEnabled = false;
             this.txtApellido.Size = new System.Drawing.Size(257, 24);
             this.txtApellido.TabIndex = 23;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -375,9 +354,10 @@
             this.txtNombre.MaximumSize = new System.Drawing.Size(267, 73);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
+            this.txtNombre.ShortcutsEnabled = false;
             this.txtNombre.Size = new System.Drawing.Size(257, 24);
             this.txtNombre.TabIndex = 22;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtMail
             // 
@@ -389,9 +369,10 @@
             this.txtMail.MaximumSize = new System.Drawing.Size(267, 73);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
-            this.txtMail.ReadOnly = true;
+            this.txtMail.ShortcutsEnabled = false;
             this.txtMail.Size = new System.Drawing.Size(257, 24);
             this.txtMail.TabIndex = 21;
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // label13
             // 
@@ -402,7 +383,6 @@
             this.label13.Size = new System.Drawing.Size(157, 24);
             this.label13.TabIndex = 20;
             this.label13.Text = "Medios de pago:";
-           
             // 
             // label14
             // 
@@ -445,6 +425,183 @@
             this.label19.Size = new System.Drawing.Size(0, 25);
             this.label19.TabIndex = 13;
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Image = ((System.Drawing.Image)(resources.GetObject("radioButton2.Image")));
+            this.radioButton2.Location = new System.Drawing.Point(101, 154);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(76, 62);
+            this.radioButton2.TabIndex = 25;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // pnlPagoTj
+            // 
+            this.pnlPagoTj.Controls.Add(this.button1);
+            this.pnlPagoTj.Controls.Add(this.txtVto);
+            this.pnlPagoTj.Controls.Add(this.txtCVV);
+            this.pnlPagoTj.Controls.Add(this.txtTj);
+            this.pnlPagoTj.Controls.Add(this.label6);
+            this.pnlPagoTj.Controls.Add(this.label7);
+            this.pnlPagoTj.Controls.Add(this.label8);
+            this.pnlPagoTj.Controls.Add(this.label9);
+            this.pnlPagoTj.Location = new System.Drawing.Point(101, 137);
+            this.pnlPagoTj.Name = "pnlPagoTj";
+            this.pnlPagoTj.Size = new System.Drawing.Size(279, 100);
+            this.pnlPagoTj.TabIndex = 27;
+            this.pnlPagoTj.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(245, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 18);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "x";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnCancelOP_Click);
+            // 
+            // txtVto
+            // 
+            this.txtVto.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txtVto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtVto.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVto.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtVto.Location = new System.Drawing.Point(82, 79);
+            this.txtVto.MaximumSize = new System.Drawing.Size(267, 73);
+            this.txtVto.Multiline = true;
+            this.txtVto.Name = "txtVto";
+            this.txtVto.ShortcutsEnabled = false;
+            this.txtVto.Size = new System.Drawing.Size(211, 18);
+            this.txtVto.TabIndex = 31;
+            // 
+            // txtCVV
+            // 
+            this.txtCVV.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txtCVV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCVV.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCVV.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtCVV.Location = new System.Drawing.Point(82, 48);
+            this.txtCVV.MaximumSize = new System.Drawing.Size(267, 73);
+            this.txtCVV.MaxLength = 4;
+            this.txtCVV.Multiline = true;
+            this.txtCVV.Name = "txtCVV";
+            this.txtCVV.ShortcutsEnabled = false;
+            this.txtCVV.Size = new System.Drawing.Size(211, 18);
+            this.txtCVV.TabIndex = 30;
+            this.txtCVV.TextChanged += new System.EventHandler(this.txtCVV_TextChanged);
+            this.txtCVV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCVV_KeyPress);
+            // 
+            // txtTj
+            // 
+            this.txtTj.BackColor = System.Drawing.SystemColors.MenuText;
+            this.txtTj.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTj.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTj.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtTj.Location = new System.Drawing.Point(84, 20);
+            this.txtTj.MaximumSize = new System.Drawing.Size(267, 73);
+            this.txtTj.MaxLength = 18;
+            this.txtTj.Multiline = true;
+            this.txtTj.Name = "txtTj";
+            this.txtTj.ShortcutsEnabled = false;
+            this.txtTj.Size = new System.Drawing.Size(211, 18);
+            this.txtTj.TabIndex = 29;
+            this.txtTj.TextChanged += new System.EventHandler(this.txtTj_TextChanged);
+            this.txtTj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTj_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 18);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Vto:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(25, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 18);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "CVV:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(-2, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 18);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "N.Tarjeta:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Black;
+            this.label9.Font = new System.Drawing.Font("News706 BT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(66, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 25);
+            this.label9.TabIndex = 24;
+            // 
+            // pnlPagoMp
+            // 
+            this.pnlPagoMp.Controls.Add(this.btnCancelMp);
+            this.pnlPagoMp.Controls.Add(this.label5);
+            this.pnlPagoMp.Controls.Add(this.pictureBox3);
+            this.pnlPagoMp.Location = new System.Drawing.Point(101, 136);
+            this.pnlPagoMp.Name = "pnlPagoMp";
+            this.pnlPagoMp.Size = new System.Drawing.Size(282, 100);
+            this.pnlPagoMp.TabIndex = 26;
+            this.pnlPagoMp.Visible = false;
+            // 
+            // btnCancelMp
+            // 
+            this.btnCancelMp.BackColor = System.Drawing.Color.Red;
+            this.btnCancelMp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelMp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelMp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancelMp.Location = new System.Drawing.Point(242, 6);
+            this.btnCancelMp.Name = "btnCancelMp";
+            this.btnCancelMp.Size = new System.Drawing.Size(31, 18);
+            this.btnCancelMp.TabIndex = 23;
+            this.btnCancelMp.Text = "x";
+            this.btnCancelMp.UseVisualStyleBackColor = false;
+            this.btnCancelMp.Click += new System.EventHandler(this.btnCancelOP_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(26, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(147, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Escanea el qr por favor";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(179, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // label20
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -471,27 +628,6 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(196, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(81, 88);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(26, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Escanea el qr por favor";
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,6 +642,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
             this.Text = "Form2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -520,10 +657,12 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.pnlPagoTj.ResumeLayout(false);
+            this.pnlPagoTj.PerformLayout();
             this.pnlPagoMp.ResumeLayout(false);
             this.pnlPagoMp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,5 +704,14 @@
         private System.Windows.Forms.Panel pnlPagoMp;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txtVto;
+        private System.Windows.Forms.TextBox txtCVV;
+        private System.Windows.Forms.TextBox txtTj;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnCancelMp;
+        private System.Windows.Forms.Button button1;
     }
 }

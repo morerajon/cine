@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 using Transitions;
+
 
 namespace cine
 {
@@ -61,11 +63,12 @@ namespace cine
         {
             pnlPagoMp.Show();
             pnlPagoTj.Hide();
+            radioButton2.Hide();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            pnlPagoTj.Show();
+            
             pnlPagoMp.Hide();
             rBMP.Hide();
             Transition t3 = new Transition(new TransitionType_EaseInEaseOut(1000));
@@ -75,7 +78,92 @@ namespace cine
             Transition t4 = new Transition(new TransitionType_EaseInEaseOut(900));
             t4.add(radioButton2, "Top", rBMP.Location.Y);
             t4.run();
+
+            pnlPagoTj.Show();
+            
         }
+
+        private void btnCancelOP_Click(object sender, EventArgs e)
+        {
+            
+            rBMP.Checked = false;
+            radioButton2.Checked = false;
+            pnlPagoMp.Hide();
+            pnlPagoTj.Hide();
+
+            rBMP.Show();
+            radioButton2.Show();
+
+            if (radioButton2.Location==rBMP.Location)
+            {
+
+            Transition t2 = new Transition(new TransitionType_EaseInEaseOut(1000));
+            t2.add(radioButton2, "Left", 101);
+            t2.run();
+
+            Transition t1 = new Transition(new TransitionType_EaseInEaseOut(900));
+            t1.add(radioButton2, "Top", 154);
+            t1.run();
+
+          
+
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ContieneLetrasyEspacios(e);
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ContieneLetrasyEspacios(e);
+        }
+
+        private void txtMail_TextChanged(object sender, EventArgs e)
+        {
+            bool valido = Validaciones.mailValido(txtMail.Text);
+
+
+            if (valido == true)
+            {
+                txtMail.ForeColor = Color.Green;
+            }
+            else { txtMail.ForeColor = Color.White; }
+        }
+
+        private void txtTj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ContieneNumeros(e);
+
+        }
+
+        private void txtTj_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTj.Text.Length > 14)
+            {
+                txtTj.ForeColor = Color.Green;
+            }
+            else { txtTj.ForeColor = Color.White; }
+        }
+
+        private void txtCVV_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCVV.Text.Length > 3)
+            {
+                txtCVV.ForeColor = Color.Green;
+            }
+            else { txtCVV.ForeColor = Color.White; }
+        }
+
+        private void txtCVV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ContieneNumeros(e);
+        }
+
+        
+
+    
 
        
     }
