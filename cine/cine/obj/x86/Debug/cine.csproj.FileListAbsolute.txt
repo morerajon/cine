@@ -8,3 +8,6 @@ c:\users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\ci
 C:\Users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.csprojResolveAssemblyReference.cache
 C:\Users\lenovo\documents\visual studio 2010\Projects\cine\cine\bin\Debug\Transitions.dll
 C:\Users\lenovo\Documents\Visual Studio 2010\Projects\cine\cine\obj\x86\Debug\cine.Form2.resources
+C:\Users\lenovo\documents\visual studio 2010\Projects\cine\cine\obj\x86\Debug\cine.Form3.resources
+C:\cine\cine\obj\x86\Debug\cine.exe
+C:\cine\cine\obj\x86\Debug\cine.pdb

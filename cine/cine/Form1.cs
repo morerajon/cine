@@ -212,15 +212,15 @@ namespace cine
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            btn.BackColor = Color.FromArgb(1, 196, 231);
+            Button btn2 = (Button)sender;
+            btn2.BackColor = Color.FromArgb(1, 196, 231);
 
-            ticket.Dia =lblMes.Text+" " +btn.Text + " ," +"hora:" +btn.Tag.ToString();
+            ticket.Dia =lblMes.Text+" " +btn2.Text + " ," +"hora:" +btn2.Tag.ToString();
 
-            foreach (Button boton in dias)
+            foreach (Button boton2 in dias)
             {
-                if (boton != btn)
-                    boton.BackColor = Color.FromArgb(86, 98, 70);
+                if (boton2 != btn2)
+                    boton2.BackColor = Color.FromArgb(86, 98, 70);
             }
 
         }
@@ -240,7 +240,7 @@ namespace cine
         private void btnContinuar_Click(object sender, EventArgs e)
         {
 
-            if (ticket.Asientos.Count != 0 && ticket.Dia != string.Empty && ticket.Cantidad != 0 && ticket.Sala != string.Empty && ticket.Pelicula!= string.Empty)
+            if (ticket.Asientos.Count!= 0 && ticket.Dia!= string.Empty && ticket.Cantidad!= 0 && ticket.Sala!= null && ticket.Pelicula!= string.Empty)
             {
                 Form2 form2 = new Form2(principal.Image);
                 form2.ShowDialog();
@@ -249,7 +249,9 @@ namespace cine
                 MessageBox.Show("Elija las opciones deseadas para continuar,por favor");
             }
             
-        } 
+        }
+
+       
 
     }
 }

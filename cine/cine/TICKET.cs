@@ -47,5 +47,51 @@ namespace cine
         }
 
     }
-    
+    public class cliente
+    {
+        private static string Nombre;
+        private static string Apellido;
+        private static string Mail;
+        private static string Tarjeta;
+        private static int cvv;
+        private static string Vto;
+
+        public string nombre
+        {
+            get { return Nombre; }
+            set { Nombre = value; }
+        }
+
+        public string apellido
+        {
+            get { return Apellido; }
+            set { Apellido = value; }
+        }
+
+        public string mail
+        {
+            get { return Mail; }
+            set { Mail = value; }
+        }
+
+        public string tarjeta
+        {
+            get { return Tarjeta; }
+            set { Tarjeta = value; }
+        }
+        public int Cvv
+        {
+            get { return cvv; }
+            set { cvv = value; }
+        }
+
+        public string vto
+        {
+            get { return Vto; }
+            set { Vto = value; }
+        }
+
+
+
+    }
 }
